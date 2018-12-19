@@ -1,5 +1,5 @@
 
-package br.com.ferraz.threads;
+package br.com.ferraz.threads.calculator;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -1,4 +1,4 @@
-package br.com.ferraz.threads;
+package br.com.ferraz.threads.calculator;
 
 public class Principal {
 

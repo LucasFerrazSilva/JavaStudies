@@ -1,4 +1,4 @@
-package br.com.ferraz.threads.main;
+package br.com.ferraz.threads.calculator.main;
 
 public class Teste {
 
