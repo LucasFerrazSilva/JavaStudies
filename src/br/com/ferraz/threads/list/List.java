@@ -6,9 +6,14 @@ public class List {
 	private int index = 0;
 	
 	
-	public synchronized void add(String element) {
+	public synchronized void add(String element) throws InterruptedException {
 		this.elements[index] = element;
 		this.index++;
+		
+		if (isFull()) {
+			System.out.println("List is full");
+			this.notify();
+		}
 	}
 	
 	public String get(int position) {
@@ -17,6 +22,10 @@ public class List {
 	
 	public int size() {
 		return this.elements.length;
+	}
+	
+	public boolean isFull() {
+		return this.index == this.elements.length;
 	}
 
 }

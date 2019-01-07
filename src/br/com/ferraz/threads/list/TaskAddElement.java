@@ -15,7 +15,11 @@ public class TaskAddElement implements Runnable {
 	@Override
 	public void run() {
 		for(int i = 0 ; i < 100 ; i++) {
-			list.add("Thread " + threadNumber + " - " + i);
+			try {
+				list.add("Thread " + threadNumber + " - " + i);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 

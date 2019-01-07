@@ -11,9 +11,7 @@ public class Runner {
 		
 		Thread.sleep(1000);
 		
-		for(int i = 0 ; i < list.size() ; i++) {
-			System.out.println(list.get(i));
-		}
+		new Thread(new PrintTask(list)).start();;
 	}
 
 }
